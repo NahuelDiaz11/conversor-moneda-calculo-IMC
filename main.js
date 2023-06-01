@@ -38,11 +38,11 @@ function calcularValorDolar() {
         alert(`Valor convertido: ${montoConvertidoDolar}`);
         break;
       case "2":
-        montoConvertidoDolar = euroHoy / dolarHoy;
+        montoConvertidoDolar = monto * (euroHoy / dolarHoy);
         alert(`Valor convertido: ${montoConvertidoDolar}`);
         break;
       case "3":
-        montoConvertidoDolar = monto *  realHoy;
+        montoConvertidoDolar = monto *  (realHoy / dolarHoy);
         alert(`Valor convertido: ${montoConvertidoDolar}`);
         break;
     }
@@ -55,7 +55,7 @@ function calcularValorEuro() {
 
   switch (selectMoneda) {
     case "1":
-      montoConvertido = monto * dolarHoy;
+      montoConvertido = monto * (dolarHoy / euroHoy);
       alert(`Valor convertido: ${montoConvertido}`);
       break;
     case "2":
@@ -63,7 +63,7 @@ function calcularValorEuro() {
       alert(`Valor convertido: ${montoConvertido}`);
       break;
     case "3":
-      montoConvertido = monto * realHoy;
+      montoConvertido = monto * (realHoy / euroHoy);
       alert(`Valor convertido: ${montoConvertido}`);
       break;
   }
@@ -76,15 +76,15 @@ function calcularValorReal() {
 
   switch (selectMoneda) {
     case "1":
-      montoConvertido = monto * dolarHoy;
+      montoConvertido = monto * (dolarHoy / realHoy);
       alert(`Valor convertido: ${montoConvertido}`);
       break;
     case "2":
-      montoConvertido = monto * (dolarHoy/euroHoy);
+      montoConvertido = monto * (euroHoy / realHoy);
       alert(`Valor convertido: ${montoConvertido}`);
       break;
     case "3":
-      montoConvertido = monto * (dolarHoy/realHoy);
+      montoConvertido = monto * realHoy;
       alert(`Valor convertido: ${montoConvertido}`);
       break;
   }
